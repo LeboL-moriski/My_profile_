@@ -1,4 +1,13 @@
 import streamlit as st
+gradient_bg = """
+<style>
+    .stApp {
+        background: linear-gradient(to bottom right, #ffecd2, #fcb69f);
+    }
+</style>
+"""
+
+st.markdown(gradient_bg, unsafe_allow_html=True)
 
 # Set page title and icon
 st.set_page_config(page_title="My Portfolio", page_icon="🌟")
