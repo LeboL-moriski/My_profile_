@@ -1,24 +1,20 @@
 import streamlit as st
-# Inject custom CSS with a gradient background
-def set_gradient_background():
-    st.markdown(
-        """
-        <style>
-        .stApp {
-            background: linear-gradient(to bottom right, #07448F, #85E2F2);
-            background-attachment: fixed;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
+# Inject custom CSS to set a radial gradient background
+st.markdown("""
+    <style>
+    .stApp {
+        background: radial-gradient(circle, #85E2F2, #063978);
+        height: 100vh;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    </style>
+    """, unsafe_allow_html=True)
 
-# Main app
-def main():
-    set_gradient_background()
-
-    st.title("Gradient Background Streamlit App")
-    st.write("This app has a custom background gradient from dark blue to light blue.")
+# Example Streamlit content
+st.title("Radial Gradient Background Example")
+st.write("This app has a radial gradient background from light blue to dark blue.")
 
 if __name__ == "__main__":
     main()
