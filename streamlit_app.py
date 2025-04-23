@@ -12,9 +12,6 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# Example Streamlit content
-st.title("Radial Gradient Background Example")
-st.write("This app has a radial gradient background from light blue to dark blue.")
 
 if __name__ == "__main__":
     main()
