@@ -1,14 +1,28 @@
 import streamlit as st
-#page colour 
-page_bg_color = """
-<style>
-    .stApp {
-        background-color: #f0f0f0;
-    }
-</style>
-"""
+# Inject custom CSS with a gradient background
+def set_gradient_background():
+    st.markdown(
+        """
+        <style>
+        .stApp {
+            background: linear-gradient(to bottom right, #07448F, #85E2F2);
+            background-attachment: fixed;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
-st.markdown(page_bg_color, unsafe_allow_html=True)
+# Main app
+def main():
+    set_gradient_background()
+
+    st.title("Gradient Background Streamlit App")
+    st.write("This app has a custom background gradient from dark blue to light blue.")
+
+if __name__ == "__main__":
+    main()
+
 # Set page title and icon
 st.set_page_config(page_title="My Portfolio", page_icon="🌟")
 
