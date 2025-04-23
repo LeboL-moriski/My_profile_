@@ -12,10 +12,6 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-
-if __name__ == "__main__":
-    main()
-
 # Set page title and icon
 st.set_page_config(page_title="My Portfolio", page_icon="🌟")
 
